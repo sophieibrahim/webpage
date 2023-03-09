@@ -4,21 +4,109 @@
     </head>
     <style>
         body {background-color: darkolivegreen;
-        margin: 40px;}
+        margin: 60px;}
         h1 {
             text-align: center;
         }
+        .ball{
+            
+        }
+        button
+        {
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: darkseagreen;
+            border: 1px solid;
+            font-family: inherit;
+            display: inline-flex;
+            justify-content: center;
+            padding: 10px 50px 10px 50px;
+        }
+
     </style>
     <body>
         <h1>~ Andy's Magic 8 Ball ~</h1>
-        <p> <br>This page will serve as my guide for the year in terms of 
-            reading. My goal is to read 8 books in 2023.</p>
+        <p> <br>Happy Birthday! Here is a simple little website made 
+        just for you :) <br> I hope you can use it whenever you need 
+        a mental break and a laugh. Potential page updates TBD. 
+        <b/r> (Send ideas if you have any)</b>
+    </p>
 
-        <h2> In Progress: </h2>
-        <p> The Road by Cormac McCarthy</p>
+        <h2> Welcome to the Magic 8 Ball!</h2>
+        <p> <b/r>Background: </b><br>
+            The origin of the Magic 8 Ball is a plastic sphere, made to look like an oversized
+            eight ball, that is used for fortune-telling or seeking advice. The user asks a 
+            yes-no question to tall ball, then turns it over (or in this case taps the button)
+            to reveal an answer in the window of the ball.</p>
+            <p>
+                <br>
+            </p>
+        <div class="ball">
+            <div class="white">
+                <p id="response"><i>What does your future hold?</i></p>
+            </div>
+        </div>
+       
+        <div class="input">
+            <input type="text" id="clear" placeholder="Type here! Ask me anything.">
+        </div>
+        <p>
+            <br>
+        </p>
         <button type="button"
-        onclick="window.location.href='https://www.goodreads.com/book/show/6288.The_Road'">
-        Magic 8 ball</button>
+        onclick="myFunction()">Enter</button>
+        <p>
+            <br>
+        </p>
+
+        <h3> Terms and Conditions Agreement: </h3>
+            This Terms of Use Agreement ("Agreement"), constitutes a 
+            legally binding agreement made between you ("Andrew J. Resh"),
+            whether personally or on behalf of an entity ("user" or "you")
+            and developer ("Sophie Ibrahim") and its affiliated companies,
+            website, applications and tools concerning your access and use of [Website URL(s)]
+            as well as any other media form, media channel, mobile website or mobile application
+            related or connected thereto (collectively known as, the "Sites"). Supplemental terms and 
+            conditions or documents that may be posted of the Sites from time to time, are
+            hereby expressively incorporated into this Agreement by reference.<br><br>
+            By accessing this webpage we assume you accept these conditions set forth by Sophie Inc.
+            [Company Name]. Your rights also obviosuly terminate if our reality is proven to be the 
+            result of the wrapping of the time-space continuum in the infinite gravity of a black hole.
+            You hearby acknowledge and agree that [Company Name] is in no way 
+            responsible for any harm and/or bad luck that proceeds the results of the Magic 8 Ball.
+            Some constellations are magical.
+            <br><br> Proceed with caution. &#169 Sophie Inc. 2023
+        </p>
         
     </body>
+    <script>
+        
+        document.getElementById("response").innerHTML=points;
+
+        function myFunction(){
+            var magicAnswer = [
+            "Yes.", "No.", "Maybe.", "It will be yours.", "Certainly.", "Possibly.", "Seems likely.", "Probably", 
+            "Signs point to yes.", "Signs point to no.", "Try again later.", "I'm not in the mood for questions.",
+            "Ask Sophie, she probably knows.", "Leave me alone. You've asked too many questions", "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "The answer will come to you.", "Ask again after giving pets to Apollo.", "I think so?", "50/50 shot",
+            "Tbh, I have no idea.", "Idk.", "Shrug.", "I think you already know.", "Sure.", "100% Yes.", "45% No?",
+            "Ummmmmmmmmm, yes?", "Do you even have to ask?", "Obviously.", "I don't think that's a good idea.",
+            "YES!", "NO!", "Sorry. On break. Ask later.", "*insert obscure emoji here*", "Why do you want to know?",
+            "Who's asking? (I'm just kidding! I know it's you. I'm just stalling to avoid giving you an answer!)",
+            "I'm tired.", "Take a nap.", "Sophie is always right. Ask her.", "Forget it.", "Definitely.", "Seems like it.",
+            "You'll know when the time is right.", "Ask Logan. https://imgur.com/gallery/0E4rCzO", "Under maintenance. Ask later.",
+            "When I4's construction ends.", "Figure this one out yourself.", "You got this.", "...", "Try asking Sophie.", 
+            "I don't know the answer, but you look great :)", "Yes. And you're looking great today.", "No. But don't worry, you're still hot",
+            "Yes sir!", "No sir :(", "Only cause you're cute, so yes.", "The stars are aligned with you.", "Check your horoscope to find out",
+            "Ask ChatGPT.", "I made too many potential answers. I don't know anymore.", "Sure handsome :)", "If this is Andy, then yes! If not, no. (And if you're not, go away!)",
+            "Hmmmmm, think about it a little more first.", "Read a book.", "Take Sophie on a date. Just cause.", "*thumbs up*", "*thumbs down*", 
+            "You'll make the right choice I know it!", "Ask Shannon.", "Ask Jill.", "Ask Apollo", "Yup.", "Nope.", "Mhmmmmm",
+            "*nods aggressively*", "*nods softly*", "You look nice today :) ....sorry got distracted, try again.", "Clear your mind. You know what to do.",
+            "yes", "no", "yeah", "*shrug*"
+        ];
+        var magicAnswer = magicAnswer[Math.floor(Math.random() * magicAnswer.length)];
+        document.getElementById("response").textContent = magicAnswer;
+        }
+    </script>
 </html>
