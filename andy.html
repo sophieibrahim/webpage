@@ -4,7 +4,7 @@
     </head>
     <style>
         body {background-color: darkolivegreen;
-            background-image: linear-gradient(to bottom right, rgb(58, 82, 19), rgb(49, 161, 196));
+            background-image: repeating-linear-gradient( rgb(45, 83, 44), rgb(181, 190, 181));
             margin: 60px;}
         h1 {
             text-align: center;
@@ -33,17 +33,16 @@
     </style>
     <body>
         <h1>~ Andy's Magic 8 Ball ~</h1>
-        <p> <br>Happy Birthday! Here is a simple little website made 
-        just for you :) <br> I hope you can use it whenever you need 
-        a mental break and a laugh. Potential page updates TBD. 
-        <b/r> (Send ideas if you have any)</b><br>
+        <p> <br>Happy Birthday! Here is a simple little website made just for you :) 
+            I hope you can use it whenever you need a mental break. <br>Page updates TBD. 
+            <b/r> (Send ideas if you have any)</b><br>
     </p>
 
         <h2> <br><u>Welcome to the Magic 8 Ball!</u></h2>
         <p> <br><b/r>Background: </b><br>
             The origin of the Magic 8 Ball is a plastic sphere, made to look like an oversized
             eight ball, that is used for fortune-telling or seeking advice. The user asks a 
-            yes-no question to the ball, then turns it over (or in this case taps the button)
+            yes or no question to the ball and then turn it over (or in this case click the button)
             to reveal an answer in the window of the ball.</p>
             <p>
                 <br>
@@ -69,11 +68,15 @@
         <p>
             <br>
         </p>
-        <h3> Bookmarks (under construction)</h3>
+        <h3> Bookmarks</h3>
         <button type="button"
         onclick="window.open('http://google.com','_blank')">Google</button>
+        <button type="button"
+        onclick="window.open('https://magic.wizards.com/en','_blank')">Magic TG</button>
+        <button type="button"
+        onclick="window.open('https://www.formula1.com/en/racing/2023.html','_blank')">F1 Schedule</button>
 
-        <h4> Terms and Conditions Agreement: </h4>
+        <h4> <br><br><br>Terms and Conditions Agreement: </h4>
             This Terms of Use Agreement ("Agreement"), constitutes a 
             legally binding agreement made between you ("Andrew J. Resch"),
             whether personally or on behalf of an entity ("user" or "you")
@@ -89,11 +92,16 @@
             You hearby acknowledge and agree that [Company Name] is in no way 
             responsible for any harm and/or bad luck that proceeds the results of the Magic 8 Ball.
             Some constellations are magical.
-            <br><br> Proceed with caution. &#169 Sophie Inc. 2023
+            <br><br> Proceed with caution. &#169 Sophie Inc. 2023 <br>
+            <br> Current Version 1.1.2
+            <br> Last Modified: 
         </p>
+        <p id="demo"></p>
         
     </body>
     <script>
+        let text = document.lastModified;
+        document.getElementById("demo").innerHTML = text;
         
         document.getElementById("response").innerHTML=points;
 
